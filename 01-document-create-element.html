@@ -1,10 +1,13 @@
-<body>
+<body id="body">
   <div id="root"></div>
+  <!-- 1. Create a DOM element using browser api -->
+  <!-- 2. Append it to the root element using browser api -->
   <script type="text/javascript">
     const rootElement = document.getElementById('root')
     const element = document.createElement('div')
     element.textContent = 'Hello World'
-    element.className = 'container'
+    element.className = 'xx'
+    console.log(element)
     rootElement.appendChild(element)
   </script>
 </body>
