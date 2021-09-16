@@ -1,18 +1,21 @@
 <body>
   <div id="root"></div>
-  <!--How to use react/any javascript library on webpage-->
+  <!--How to use react/any javascript library on webpage -->
   <script src="https://unpkg.com/react@16.12.0/umd/react.development.js"></script>
   <script src="https://unpkg.com/react-dom@16.12.0/umd/react-dom.development.js"></script>
-  <!-- 1. Create an element using React api -->
-  <!-- 2. Type of the react element is div -->
-  <!-- 3. Render the element using ReactDOM api -->
   <script type="text/javascript">
     const rootElement = document.getElementById('root')
+    // 1. Create an element using React api
+    // First argument is the type of the HTML elements
+    // Second argument is the properties of the HTML element
     const element = React.createElement('div', {
       className: 'container',
       children: ['Hello World', ', Goodbye']
     })
+    // 2. Type of the react element is div and the other argument is the object describing the attributes of the HTMP element 
+    // such as class name, text content etc.
     console.log(element)
+    // 3. Render the element using ReactDOM API
     ReactDOM.render(element, rootElement)
   </script>
 </body>

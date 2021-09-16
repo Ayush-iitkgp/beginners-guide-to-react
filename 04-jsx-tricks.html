@@ -5,9 +5,22 @@
   <script src="https://unpkg.com/@babel/standalone@7.8.3/babel.js"></script>
   <script type="text/babel">
     const rootElement = document.getElementById('root')
+    const children_1 = 'Element1'
+    // Anything inside {} get evaulated by babel 
+    // Example: 1
+    const element_1 = <div>{children_1}</div>
+
+    // Example: 2
+    const children_2 = 'Element2'
+    const className_2 = 'ayush'
+    const element_2 = <div className = {className_2}>{children_2}</div>
+
+    // Example: 3
     const children = 'Hello World'
     const className = 'container'
     const props = {children, className}
+    // The below line is JSX not HTML so we can have self-closing tags unlike HTML
+    // the three-dots (...) before a JS object spreads it
     const element = <div {...props} />
     ReactDOM.render(element, rootElement)
   </script>
